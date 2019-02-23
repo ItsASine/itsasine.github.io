@@ -3,8 +3,8 @@
 <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
   {% assign public_repositories = site.github.public_repositories | where:'fork', false | sort: 'stargazers_count' | reverse %}
   {% for repository in public_repositories limit: 12 %}
-    {% unless repository.name contains "🥀" %}
-    {% unless repository.name contains "🎲" %}
+    {% unless repository.description contains "🥀" %}
+    {% unless repository.description contains "🎲" %}
     <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
       {% include repo-card.html %}
     </div>
