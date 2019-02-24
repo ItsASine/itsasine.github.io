@@ -11,12 +11,12 @@
   <div class="d-flex f6">
     {% if repository.stargazers_count %}
       <a href="{{ repository.html_url }}/stargazers" class="d-inline-block link-gray mr-4">
-        <i class="far fa-star mr-1"></i>{{ repository.stargazers_count }}
+        <i class="far fa-star"></i>{{ repository.stargazers_count }}
       </a>
     {% endif %}
     {% if repository.forks_count %}
       <a href="{{ repository.html_url }}/network/members" class="d-inline-block link-gray mr-4">
-        <i class="fas fa-code-branch mr-1"></i>{{ repository.forks_count }}
+        <i class="fas fa-code-branch"></i>{{ repository.forks_count }}
       </a>
     {% endif %}
   </div>
