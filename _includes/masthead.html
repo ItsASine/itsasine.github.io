@@ -13,24 +13,22 @@
 {% if include.metadata %}
   <div class="f4 mb-6">
     {% if user.name %}
-      <div class="{{ metadata_styles }}">
-        <i class="fab fa-github" {% if site.style == 'dark' %}class="text-white"{% endif %}></i>
-        <a href="https://github.com/{{ user.login }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+      <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+        <i class="fab fa-github text-white"></i>  <a href="https://github.com/{{ user.login }}">
           @{{ user.login }}
         </a>
       </div>
     {% endif %}
     {% if user.email %}
-      <div class="{{ metadata_styles }}">
-        <i class="far fa-envelope" {% if site.style == 'dark' %}class="text-white"{% endif %}></i>
-        <a href="mailto:{{ user.email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+      <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+        <i class="far fa-envelope text-white"></i>  <a href="mailto:{{ user.email }}">
           {{ user.email }}
         </a>
       </div>
     {% endif %}
     {% if user.location %}
       <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
-        <i class="fas fa-map-marker-alt"></i> {{ user.location }}
+        <i class="fas fa-map-marker-alt"></i>  {{ user.location }}
       </div>
     {% endif %}
     {% if user.hireable %}
